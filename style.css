@@ -42,15 +42,15 @@ img {
 
 /* Headings */
 h1 {
-  font-family: 'Ballet', cursive;
-  font-weight: normal;       /* avoid bolding Ballet */
+  font-family: 'Pinyon Script', cursive;
+  font-weight: normal;       /* avoid bolding Pinyon Script */
   font-size: 3rem;
   text-align: center;
   margin: 0 0 2rem 0;
 }
 
 h2 {
-  font-family: 'Ballet', cursive;
+  font-family: 'Pinyon Script', cursive;
   font-weight: normal;
   font-size: 2rem;
   color: #333;
