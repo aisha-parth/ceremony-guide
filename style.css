@@ -1,58 +1,81 @@
+/* Global reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: 'Libertinus Sans', serif;
-  background-color: white;
+  font-family: 'Lora', serif; /* was 'Libertinus Sans' (not a web font unless self-hosted) */
+  background: #fff;
   color: #222;
   line-height: 1.6;
   padding: 1rem;
 }
 
+/* Section card */
 section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
+  gap: 1rem;                 /* cleaner than stacking margins inside */
+  margin: 0 auto 3rem;       /* center + bottom space */
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
+  background: #fff;
   padding: 1rem;
   border-radius: 8px;
 }
 
+/* Media block */
 img {
+  display: block;            /* removes inline gap */
   width: 100%;
   height: auto;
   max-height: 320px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin: 0;                 /* spacing handled by section gap */
 }
 
+/* Headings */
 h1 {
   font-family: 'Ballet', cursive;
+  font-weight: normal;       /* avoid bolding Ballet */
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
 }
 
 h2 {
   font-family: 'Ballet', cursive;
+  font-weight: normal;
   font-size: 2rem;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
+/* Optional text wrapper beside image on desktop */
+.description {
+  /* nothing needed here for mobile */
+}
+
+/* Responsive: split image / text */
 @media (min-width: 768px) {
   section {
     flex-direction: row;
     align-items: center;
+    gap: 2rem;
+    padding: 1.25rem 1.5rem;
   }
 
   img {
     flex: 1;
     max-width: 50%;
-    margin-right: 2rem;
     max-height: 400px;
+    margin: 0;
   }
 
   .description {
