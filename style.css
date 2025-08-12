@@ -1,0 +1,61 @@
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: white;
+  color: #222;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Mea Culpa', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Mea Culpa', cursive;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  img {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 2rem;
+    max-height: 400px;
+  }
+
+  .description {
+    flex: 1;
+  }
+}
